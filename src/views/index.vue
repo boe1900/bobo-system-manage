@@ -12,7 +12,7 @@
 <template>
     <div class="layout">
       <Row type="flex" style="height:100%;">
-        
+        这里是首页
       </Row>
     </div>
 </template>

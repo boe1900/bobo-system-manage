@@ -63,7 +63,7 @@
                   if (valid) {
                     let data = {
                       appId:'backend',
-                      grant_type:'app_credential',
+                      grant_type:'password',
                       username:this.formInline.user,
                       password:this.formInline.password
                     }
@@ -71,7 +71,7 @@
                       console.log(res);
                       if(res.code == 200){
                         this.$store.commit(types.LOGIN, res.data.access_token);
-                        this.$router.replace('/index')
+                        this.$router.replace('/index');
                       }else{
                         this.$Message.error(res.message);
                       }
@@ -81,6 +81,11 @@
                     }
                 })
             }
+        },
+        mounted(){
+          if (localStorage.token) {
+            this.$router.replace('/index');
+          }
         }
     };
 </script>
