@@ -21,7 +21,13 @@ const routes = [
     component: resolve => require(['./views/index.vue'], resolve),
     meta: {
       requireAuth: true
-    }
+    },
+    children:[
+      {
+        path: "/systemManage",
+        component: resolve => require(['./views/index.vue'], resolve),
+      }
+    ]
   }
 ];
 

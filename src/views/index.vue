@@ -68,7 +68,7 @@
                           <Icon type="ios-navigate"></Icon>
                           导航一
                       </template>
-                      <Menu-item name="1-1">选项 1</Menu-item>
+                      <Menu-item name="systemManage">选项 1</Menu-item>
                       <Menu-item name="1-2">选项 2</Menu-item>
                       <Menu-item name="1-3">选项 3</Menu-item>
                   </Submenu>
@@ -135,7 +135,7 @@ export default {
         },
         methods: {
                 routeTo(e) {
-                    console.log(e);
+                  this.$router.push(e);
                 }
         }
 }

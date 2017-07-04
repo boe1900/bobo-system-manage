@@ -71,13 +71,17 @@
                       console.log(res);
                       if(res.code == 200){
                         this.$store.commit(types.LOGIN, res.data.access_token);
-                        this.$router.replace('/index');
+                        let redirect = this.$route.query.redirect || '/';
+                        this.$router.push({
+                            path: redirect
+                        });
+                        // this.$router.replace('/index');
                       }else{
                         this.$Message.error(res.message);
                       }
                     });
                   } else {
-                        message.error('表单验证失败!');
+                        this.$message.error('表单验证失败!');
                     }
                 })
             }
