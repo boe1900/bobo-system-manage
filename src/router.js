@@ -14,18 +14,18 @@ const routes = [
   },
   {
     path: "/login",
-    component: resolve => require(['./views/login.vue'], resolve)
+    component: resolve => require(['./views/Login.vue'], resolve)
   },
   {
     path: "/index",
-    component: resolve => require(['./views/index.vue'], resolve),
+    component: resolve => require(['./views/Home.vue'], resolve),
     meta: {
       requireAuth: true
     },
     children:[
       {
-        path: "/systemManage",
-        component: resolve => require(['./views/index.vue'], resolve),
+        path: "/system-manage",
+        component: resolve => require(['./views/SystemManage.vue'], resolve),
       }
     ]
   }

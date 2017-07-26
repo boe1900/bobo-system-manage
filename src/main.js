@@ -2,8 +2,7 @@ import Vue from 'vue';
 import router from './router';
 import store from './store/store';
 import App from './app.vue';
-import 'iview/dist/styles/iview.css';
-
+import '!style-loader!css-loader!less-loader!./theme/index.less';
 
 
 new Vue({
